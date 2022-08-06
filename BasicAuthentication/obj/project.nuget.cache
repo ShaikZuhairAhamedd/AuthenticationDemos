@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "n18qETweaPaUKmOrzCO2kAMYFhn6GAG3FOb2BAkpp03jNWOzbqkRXf60Ixh4dd+O+PJHZ9fEPVqN4YautSqFUw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\shaik zuhair ahamed\\OneDrive\\Desktop\\Lecture\\BasicAuthentication\\BasicAuthentication\\BasicAuthentication.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\shaik zuhair ahamed\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512"
+  ],
+  "logs": []
+}
