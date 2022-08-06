@@ -7,5 +7,6 @@ namespace Server
 {
     public class sClass
     {
+        public int x = 10;
     }
 }
