@@ -9,6 +9,7 @@ namespace Server
     {
         
         public const string Audiance = "https://localhost:44393/";
- 
+        public const string Issuer = Audiance;
+        public const string Secret = "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz";
     }
 }
