@@ -37,3 +37,4 @@ C:\Users\shaik zuhair ahamed\OneDrive\Desktop\Lecture\BasicAuthentication\Server
 C:\Users\shaik zuhair ahamed\OneDrive\Desktop\Lecture\BasicAuthentication\Server\obj\Debug\netcoreapp3.1\Server.dll
 C:\Users\shaik zuhair ahamed\OneDrive\Desktop\Lecture\BasicAuthentication\Server\obj\Debug\netcoreapp3.1\Server.pdb
 C:\Users\shaik zuhair ahamed\OneDrive\Desktop\Lecture\BasicAuthentication\Server\obj\Debug\netcoreapp3.1\Server.genruntimeconfig.cache
+C:\Users\shaik zuhair ahamed\OneDrive\Desktop\Lecture\BasicAuthentication\Server\obj\Debug\netcoreapp3.1\Razor\Views\OAuth\Authorize.cshtml.g.cs
