@@ -28,3 +28,4 @@ C:\Users\shaik zuhair ahamed\OneDrive\Desktop\Lecture\BasicAuthentication\Client
 C:\Users\shaik zuhair ahamed\OneDrive\Desktop\Lecture\BasicAuthentication\Client\obj\Debug\netcoreapp3.1\Client.RazorTargetAssemblyInfo.cs
 C:\Users\shaik zuhair ahamed\OneDrive\Desktop\Lecture\BasicAuthentication\Client\obj\Debug\netcoreapp3.1\Client.Views.pdb
 C:\Users\shaik zuhair ahamed\OneDrive\Desktop\Lecture\BasicAuthentication\Client\obj\Debug\netcoreapp3.1\Client.csproj.CopyComplete
+C:\Users\shaik zuhair ahamed\OneDrive\Desktop\Lecture\BasicAuthentication\Client\obj\Debug\netcoreapp3.1\Razor\Views\Home\Secret.cshtml.g.cs
