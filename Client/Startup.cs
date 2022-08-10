@@ -38,13 +38,13 @@ namespace Client
                             OnCreatingTicket = (context) =>
                             {
                                 var accessToken = context.AccessToken;
-                                var base64ayload = accessToken.Split('.')[1];
-                                var bytes = Convert.FromBase64String(base64ayload);
+                                var base64Payload= accessToken.Split('.')[1];
+                                var bytes = Convert.FromBase64String(base64Payload);
                                 var jsonPayload = System.Text.Encoding.UTF8.GetString(bytes);
-                                var claims = System.Text.Json.JsonSerializer.Deserialize <Dictionary<string, string>>(jsonPayload,null);
-
+                                var claims = System.Text.Json.JsonSerializer.Deserialize <Dictionary<string, object >>(jsonPayload);
+                                
                                 foreach (var claim in claims) {
-                                    context.Identity.AddClaim(new System.Security.Claims.Claim(claim.Key, claim.Value));
+                                    context.Identity.AddClaim(new System.Security.Claims.Claim(claim.Key, Convert.ToString(claim.Value)));
                                 }
 
                                 return Task.CompletedTask;
