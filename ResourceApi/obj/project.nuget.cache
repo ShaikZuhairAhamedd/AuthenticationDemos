@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "W8gwHsx9ecUfbn6fIp+pRANjUA3W65wma8KIfMFrW1avh9nA0YjfQfRs4zrGvBW+e3yQY0NMh0tT1fX2iavMVA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\shaik zuhair ahamed\\OneDrive\\Desktop\\Lecture\\BasicAuthentication\\ResourceApi\\ResourceApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\shaik zuhair ahamed\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512"
+  ],
+  "logs": []
+}

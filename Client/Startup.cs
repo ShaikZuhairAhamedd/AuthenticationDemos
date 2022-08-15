@@ -37,15 +37,23 @@ namespace Client
 
                             OnCreatingTicket = (context) =>
                             {
+                                
+                                /*By Default this whole Part is impletend what we are doing
+                                 * i.e is from accessToken creating of the cookie and i.e
+                                 
                                 var accessToken = context.AccessToken;
                                 var base64Payload= accessToken.Split('.')[1];
                                 var bytes = Convert.FromBase64String(base64Payload);
                                 var jsonPayload = System.Text.Encoding.UTF8.GetString(bytes);
                                 var claims = System.Text.Json.JsonSerializer.Deserialize <Dictionary<string, object >>(jsonPayload);
-                                
+                                /* previously during Dictionary<string,string> we are getting error bz
+                                   this deserializer cannnot converting the number into string type....
+
+                                 
                                 foreach (var claim in claims) {
                                     context.Identity.AddClaim(new System.Security.Claims.Claim(claim.Key, Convert.ToString(claim.Value)));
                                 }
+                                */
 
                                 return Task.CompletedTask;
                             }
@@ -53,7 +61,10 @@ namespace Client
 
 
                     });
+            services.AddHttpClient();
             services.AddControllersWithViews();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

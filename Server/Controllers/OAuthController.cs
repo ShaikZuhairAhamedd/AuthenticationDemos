@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http.Extensions;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -81,6 +82,22 @@ namespace Server.Controllers
 
             return Redirect(redirect_uri);
         }
-        
+
+        [Authorize]
+        [HttpGet]
+        public IActionResult Validate() {
+            
+            if (!HttpContext.Request.Query.TryGetValue("access_token",out var accessToken)) {
+                
+                return BadRequest();  
+                
+            }
+           //.....here we have the accessToken we can do the validation based on the Request...?
+
+           // Currently We are Just Sending status code:-> 200 range...for success
+          
+
+            return Ok();
+        }
     }
 }
