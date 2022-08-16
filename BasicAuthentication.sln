@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "Server\Server.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csproj", "{31369C08-1683-40E2-AEA2-C2F60D3753BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResourceApi", "ResourceApi\ResourceApi.csproj", "{9D6C61E9-BA8C-4998-84B5-8EDFDBC535B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResourceApi", "ResourceApi\ResourceApi.csproj", "{9D6C61E9-BA8C-4998-84B5-8EDFDBC535B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtWithRefreshTokenDemo", "JwtWithRefreshTokenDemo\JwtWithRefreshTokenDemo.csproj", "{C2072565-9369-45B7-88E1-47D667B0355F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,10 @@ Global
 		{9D6C61E9-BA8C-4998-84B5-8EDFDBC535B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D6C61E9-BA8C-4998-84B5-8EDFDBC535B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D6C61E9-BA8C-4998-84B5-8EDFDBC535B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2072565-9369-45B7-88E1-47D667B0355F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2072565-9369-45B7-88E1-47D667B0355F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2072565-9369-45B7-88E1-47D667B0355F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2072565-9369-45B7-88E1-47D667B0355F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
