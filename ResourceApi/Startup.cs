@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ResourceApi.JwtRequirment;
+using Microsoft.AspNetCore.Authentication;
 
 namespace ResourceApi
 {
@@ -18,8 +19,8 @@ namespace ResourceApi
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddAuthentication()
-                    ;
+            services.AddAuthentication("DefaultAuth")
+                    .AddScheme<AuthenticationSchemeOptions, CustomAuthenticationHandler>("DefaultAuth",null);
             services.AddAuthorization(config=> {
                 var defaultAuthBuilder = new AuthorizationPolicyBuilder();
                 var defaultAuthPolicy = defaultAuthBuilder

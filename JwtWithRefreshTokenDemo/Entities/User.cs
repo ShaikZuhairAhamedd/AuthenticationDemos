@@ -12,5 +12,8 @@ namespace JwtWithRefreshTokenDemo.Entities
         public string Password { get; set; }
         [Key]
         public int UserId { get; set; }
+
+        public List<UserRefreshToken> userRefreshTokens { get; set; }
+
     }
 }

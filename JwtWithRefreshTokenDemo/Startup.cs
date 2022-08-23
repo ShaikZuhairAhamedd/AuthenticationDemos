@@ -11,6 +11,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,17 +50,37 @@ namespace JwtWithRefreshTokenDemo
                 var tokenValidaton = new TokenValidationParameters()
                 {
                     IssuerSigningKey = new SymmetricSecurityKey(keyBytes),
-                    ValidateLifetime = true,
+                   
                     ValidateAudience = false,
                     ValidateIssuer = false,
-                    ClockSkew = TimeSpan.Zero
+                    ClockSkew = TimeSpan.Zero,
+                    ValidateIssuerSigningKey=true
+
                 };
 
                 // assiging this  TokenValidationProvider
 
                 jwtOptions.TokenValidationParameters = tokenValidaton;
+                // after validating the Token through based on the details specified in the tokenValidation Parameter
+                jwtOptions.Events = new JwtBearerEvents() {
+                    OnTokenValidated = async (context) => {
+                        // this method is used for custom Validation--?--?--?
+                        //  other than the validatin like keyValidation,TimeValidation etc...
+
+                        var ipAddress = context.Request.HttpContext.Connection.RemoteIpAddress.ToString();
+                        var jwtService = context.Request.HttpContext.RequestServices.GetService<IJwtService>();
+                        var jwtToken = context.SecurityToken as JwtSecurityToken;
+                        if (!await jwtService.IsTokenValid(jwtToken.RawData, ipAddress)) {
+                            context.Fail("Invalid Token Details");
+                        }
+                         
+                     }
+                };
+
+
 
             });
+            services.AddAuthorization();
                     
         }
 
@@ -73,12 +94,10 @@ namespace JwtWithRefreshTokenDemo
 
             app.UseRouting();
             app.UseAuthentication();
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+                endpoints.MapDefaultControllerRoute();
             });
         }
     }

@@ -45,6 +45,7 @@ namespace Server
                                                                                         Encoding.UTF8.GetBytes(Constant.Secret)),
                                                        ValidIssuer = Constant.Issuer,
                                                       ValidAudience=Constant.Audiance,
+                                                      ClockSkew=TimeSpan.Zero,
                                                 };
 
 

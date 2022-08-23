@@ -62,7 +62,7 @@ namespace Server.Controllers
                   Constant.Audiance,
                   claims,
                   notBefore: DateTime.Now,
-                  expires: DateTime.Now.AddHours(1),
+                  expires: DateTime.Now.AddMilliseconds(1),
                   signingCredentials
                 );
 

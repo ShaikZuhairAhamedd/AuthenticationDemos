@@ -15,5 +15,6 @@ namespace JwtWithRefreshTokenDemo.Context
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<UserRefreshToken> userRefreshTokens { get; set; }
     }
 }

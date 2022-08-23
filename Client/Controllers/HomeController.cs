@@ -26,10 +26,15 @@ namespace Client.Controllers
             _client.DefaultRequestHeaders.Add("Authorization",$"Bearer {token}");
               //   var serverRespone = await _client.GetAsync("https://localhost:44393/Secret/index");
 
-             var apiResponse=await _client.GetAsync("https://localhost:44338/Secret/index");
-
+            //10 Min Referesh Token Is Completed...?
+            var apiResponse=await _client.GetAsync("https://localhost:44338/Secret/index");
+            
             return View();
         }
+
+        /*
+         With current Access Token we are requesting to the secure Api server it is returning with 401. bz access token is expired
+         */
 
     }
 }
